@@ -12,6 +12,9 @@
         <L7p:Include>
             <L7p:PolicyGuid stringValue="0c8321c3-d484-4675-b1be-eddf6e780b8a"/>
         </L7p:Include>
+        <L7p:Include>
+            <L7p:PolicyGuid stringValue="819980fa-58cd-4134-a8c3-80290bcf340f"/>
+        </L7p:Include>
         <L7p:CustomizeErrorResponse>
             <L7p:Content stringValueReference="inline"><![CDATA[{
    "error":"Back-End Error"
@@ -27,6 +30,40 @@
             <L7p:KeyAlias stringValue="ssl"/>
             <L7p:NonDefaultKeystoreId goidValue="00000000000000000000000000000002"/>
             <L7p:ProtectedServiceUrl stringValue="https://${gateway.demo.backend.host}${gateway.demo.transformerPath}"/>
+            <L7p:ProxyPassword stringValueNull="null"/>
+            <L7p:ProxyUsername stringValueNull="null"/>
+            <L7p:RequestHeaderRules httpPassthroughRuleSet="included">
+                <L7p:ForwardAll booleanValue="true"/>
+                <L7p:Rules httpPassthroughRules="included">
+                    <L7p:item httpPassthroughRule="included">
+                        <L7p:Name stringValue="Cookie"/>
+                    </L7p:item>
+                    <L7p:item httpPassthroughRule="included">
+                        <L7p:Name stringValue="SOAPAction"/>
+                    </L7p:item>
+                </L7p:Rules>
+            </L7p:RequestHeaderRules>
+            <L7p:RequestParamRules httpPassthroughRuleSet="included">
+                <L7p:ForwardAll booleanValue="true"/>
+                <L7p:Rules httpPassthroughRules="included"/>
+            </L7p:RequestParamRules>
+            <L7p:ResponseHeaderRules httpPassthroughRuleSet="included">
+                <L7p:ForwardAll booleanValue="true"/>
+                <L7p:Rules httpPassthroughRules="included">
+                    <L7p:item httpPassthroughRule="included">
+                        <L7p:Name stringValue="Set-Cookie"/>
+                    </L7p:item>
+                </L7p:Rules>
+            </L7p:ResponseHeaderRules>
+            <L7p:ResponseMsgDest stringValue="backendResponse"/>
+            <L7p:SamlAssertionVersion intValue="2"/>
+            <L7p:UsesDefaultKeyStore booleanValue="false"/>
+        </L7p:HttpRoutingAssertion>
+        <L7p:HttpRoutingAssertion>
+            <L7p:Enabled booleanValue="false"/>
+            <L7p:KeyAlias stringValue="ssl"/>
+            <L7p:NonDefaultKeystoreId goidValue="00000000000000000000000000000002"/>
+            <L7p:ProtectedServiceUrl stringValue="https://${servicehost.result}${serviceport.result}${serviceurl.result}"/>
             <L7p:ProxyPassword stringValueNull="null"/>
             <L7p:ProxyUsername stringValueNull="null"/>
             <L7p:RequestHeaderRules httpPassthroughRuleSet="included">

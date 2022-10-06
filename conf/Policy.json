@@ -1,6 +1,46 @@
 {
     "policy": [
         {
+            "guid": "0c8321c3-d484-4675-b1be-eddf6e780b8a",
+            "policyDetail": {
+                "folderId": "a52351e3add029955827ee90814e0290",
+                "guid": "0c8321c3-d484-4675-b1be-eddf6e780b8a",
+                "id": "f76ae94c44ab58230d854abc0966ad6e",
+                "name": "DemoAuthFragment",
+                "policyType": "Include",
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "revision",
+                            "longValue": "2"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        }
+                    ]
+                }
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "DemoAuthFragment.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "f76ae94c44ab58230d854abc0966ad6e"
+        },
+        {
             "guid": "819980fa-58cd-4134-a8c3-80290bcf340f",
             "policyDetail": {
                 "folderId": "a52351e3add029955827ee90814e0290",
@@ -79,6 +119,46 @@
                 ]
             },
             "id": "b3ebc1f95490d14b527ef46d6b233ac2"
+        },
+        {
+            "guid": "d3b84cd3-3186-472f-b1d3-0d1a56191cd3",
+            "policyDetail": {
+                "folderId": "f76ae94c44ab58230d854abc0966ad24",
+                "guid": "d3b84cd3-3186-472f-b1d3-0d1a56191cd3",
+                "id": "f76ae94c44ab58230d854abc0966ad89",
+                "name": "DemoLogic",
+                "policyType": "Include",
+                "properties": {
+                    "property": [
+                        {
+                            "key": "hasRouting",
+                            "booleanValue": "false"
+                        },
+                        {
+                            "key": "revision",
+                            "longValue": "23"
+                        },
+                        {
+                            "key": "soap",
+                            "booleanValue": "false"
+                        }
+                    ]
+                }
+            },
+            "resources": {
+                "resourceSet": [
+                    {
+                        "tag": "policy",
+                        "resource": [
+                            {
+                                "type": "policy",
+                                "content": "DemoLogic.xml"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "id": "f76ae94c44ab58230d854abc0966ad89"
         },
         {
             "guid": "af91fb7a-1b64-41a9-82bc-29c28a8b6718",

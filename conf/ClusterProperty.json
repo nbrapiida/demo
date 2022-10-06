@@ -7,7 +7,7 @@
         },
         {
             "name": "demo.training.configuration",
-            "value": "{\n  \"serviceurl\":\"\/demo\/migration\/jsontransform\",\n  \"serviceport\":\"8443\",\n  \"servicehost\":\"localhost\"\n}",
+            "value": "{\n  \"logmode\":\"audit\",\n  \"serviceurl\":\"\/demo\/migration\/jsontransform\",\n  \"serviceport\":\"8443\",\n  \"servicehost\":\"l7gw\",\n  \"loginuser\":\"nbreuer\",\n  \"demosetting\":\"demo\"\n}",
             "id": "b2383bdfe09adb9a8f7efac30c50d7f1"
         }
     ]

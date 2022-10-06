@@ -15,6 +15,9 @@
       <l7:Folder folderId="e001cfd0c1c1ffaa18e187b5e72fc718" id="e001cfd0c1c1ffaa18e187b5e72fc818" version="0">
         <l7:Name>Policy Fragments</l7:Name>
       </l7:Folder>
+      <l7:Folder folderId="f76ae94c44ab58230d854abc0966ad24" id="a52351e3add029955827ee90814e0290" version="0">
+        <l7:Name>Policies</l7:Name>
+      </l7:Folder>
       <l7:Folder folderId="e001cfd0c1c1ffaa18e187b5e72fc818" id="e001cfd0c1c1ffaa18e187b5e72fc858" version="0">
         <l7:Name>configuration</l7:Name>
       </l7:Folder>

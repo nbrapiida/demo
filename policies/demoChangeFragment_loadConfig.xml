@@ -20,6 +20,39 @@
             </L7p:SetVariable>
             <wsp:All wsp:Usage="Required">
                 <L7p:EvaluateJsonPathExpressionV2>
+                    <L7p:Expression stringValue="$.logmode"/>
+                    <L7p:OtherTargetMessageVariable stringValue="configuration"/>
+                    <L7p:Target target="OTHER"/>
+                    <L7p:VariablePrefix stringValue="logmode"/>
+                </L7p:EvaluateJsonPathExpressionV2>
+                <L7p:ComparisonAssertion>
+                    <L7p:Expression1 stringValue="${logmode.result}"/>
+                    <L7p:Expression2 stringValue=""/>
+                    <L7p:Negate booleanValue="true"/>
+                    <L7p:Operator operator="EMPTY"/>
+                    <L7p:Predicates predicates="included">
+                        <L7p:item binary="included">
+                            <L7p:Negated booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:RightValue stringValue=""/>
+                        </L7p:item>
+                    </L7p:Predicates>
+                </L7p:ComparisonAssertion>
+                <L7p:SetVariable>
+                    <L7p:Base64Expression stringValue="JHtsb2dtb2RlLnJlc3VsdH0="/>
+                    <L7p:VariableToSet stringValue="logMode"/>
+                </L7p:SetVariable>
+                <L7p:assertionComment>
+                    <L7p:Properties mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="RIGHT.COMMENT"/>
+                            <L7p:value stringValue="logmode"/>
+                        </L7p:entry>
+                    </L7p:Properties>
+                </L7p:assertionComment>
+            </wsp:All>
+            <wsp:All wsp:Usage="Required">
+                <L7p:EvaluateJsonPathExpressionV2>
                     <L7p:Expression stringValue="$.serviceurl"/>
                     <L7p:OtherTargetMessageVariable stringValue="configuration"/>
                     <L7p:Target target="OTHER"/>
@@ -88,7 +121,7 @@
                     <L7p:VariablePrefix stringValue="servicehost"/>
                 </L7p:EvaluateJsonPathExpressionV2>
                 <L7p:ComparisonAssertion>
-                    <L7p:Expression1 stringValue="${servicehostl.result}"/>
+                    <L7p:Expression1 stringValue="${servicehost.result}"/>
                     <L7p:Expression2 stringValue=""/>
                     <L7p:Negate booleanValue="true"/>
                     <L7p:Operator operator="EMPTY"/>
@@ -109,6 +142,76 @@
                     </L7p:Properties>
                 </L7p:assertionComment>
             </wsp:All>
+            <wsp:All wsp:Usage="Required">
+                <L7p:EvaluateJsonPathExpressionV2>
+                    <L7p:Expression stringValue="$.loginuser"/>
+                    <L7p:OtherTargetMessageVariable stringValue="configuration"/>
+                    <L7p:Target target="OTHER"/>
+                    <L7p:VariablePrefix stringValue="loginuser"/>
+                </L7p:EvaluateJsonPathExpressionV2>
+                <L7p:ComparisonAssertion>
+                    <L7p:Expression1 stringValue="${loginuser.result}"/>
+                    <L7p:Expression2 stringValue=""/>
+                    <L7p:Negate booleanValue="true"/>
+                    <L7p:Operator operator="EMPTY"/>
+                    <L7p:Predicates predicates="included">
+                        <L7p:item binary="included">
+                            <L7p:Negated booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:RightValue stringValue=""/>
+                        </L7p:item>
+                    </L7p:Predicates>
+                </L7p:ComparisonAssertion>
+                <L7p:SetVariable>
+                    <L7p:Base64Expression stringValue="JHtsb2dpbnVzZXIucmVzdWx0fQ=="/>
+                    <L7p:VariableToSet stringValue="loginuser"/>
+                </L7p:SetVariable>
+                <L7p:assertionComment>
+                    <L7p:Properties mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="RIGHT.COMMENT"/>
+                            <L7p:value stringValue="loginuser"/>
+                        </L7p:entry>
+                    </L7p:Properties>
+                </L7p:assertionComment>
+            </wsp:All>
+            <wsp:All wsp:Usage="Required">
+                <L7p:EvaluateJsonPathExpressionV2>
+                    <L7p:Expression stringValue="$.demosetting"/>
+                    <L7p:OtherTargetMessageVariable stringValue="configuration"/>
+                    <L7p:Target target="OTHER"/>
+                    <L7p:VariablePrefix stringValue="demosetting"/>
+                </L7p:EvaluateJsonPathExpressionV2>
+                <L7p:ComparisonAssertion>
+                    <L7p:Expression1 stringValue="${demosetting.result}"/>
+                    <L7p:Expression2 stringValue=""/>
+                    <L7p:Negate booleanValue="true"/>
+                    <L7p:Operator operator="EMPTY"/>
+                    <L7p:Predicates predicates="included">
+                        <L7p:item binary="included">
+                            <L7p:Negated booleanValue="true"/>
+                            <L7p:Operator operator="EMPTY"/>
+                            <L7p:RightValue stringValue=""/>
+                        </L7p:item>
+                    </L7p:Predicates>
+                </L7p:ComparisonAssertion>
+                <L7p:SetVariable>
+                    <L7p:Base64Expression stringValue="JHtkZW1vc2V0dGluZy5yZXN1bHR9"/>
+                    <L7p:VariableToSet stringValue="demosetting"/>
+                </L7p:SetVariable>
+                <L7p:assertionComment>
+                    <L7p:Properties mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="RIGHT.COMMENT"/>
+                            <L7p:value stringValue="demosetting"/>
+                        </L7p:entry>
+                    </L7p:Properties>
+                </L7p:assertionComment>
+            </wsp:All>
+            <L7p:SetVariable>
+                <L7p:Base64Expression stringValue="JHtzZXJ2aWNlaG9zdC5yZXN1bHR9OiR7c2VydmljZXBvcnQucmVzdWx0fSR7c2VydmljZXVybC5yZXN1bHR9"/>
+                <L7p:VariableToSet stringValue="route"/>
+            </L7p:SetVariable>
             <L7p:assertionComment>
                 <L7p:Properties mapValue="included">
                     <L7p:entry>

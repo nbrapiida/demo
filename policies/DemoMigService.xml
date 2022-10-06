@@ -9,11 +9,59 @@
             <L7p:ExtraHeaders nameValuePairArray="included"/>
             <L7p:HttpStatus stringValue="401"/>
         </L7p:CustomizeErrorResponse>
-        <L7p:Include>
-            <L7p:PolicyGuid stringValue="0c8321c3-d484-4675-b1be-eddf6e780b8a"/>
-        </L7p:Include>
+        <wsp:OneOrMore wsp:Usage="Required">
+            <wsp:All wsp:Usage="Required">
+                <L7p:Encapsulated>
+                    <L7p:EncapsulatedAssertionConfigGuid stringValue="393bcb93-82ad-4b55-8333-1119f607a560"/>
+                    <L7p:EncapsulatedAssertionConfigName stringValue="OTK Require OAuth 2.0 Token"/>
+                    <L7p:Parameters mapValue="included">
+                        <L7p:entry>
+                            <L7p:key stringValue="any_resource_required"/>
+                            <L7p:value stringValue="false"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="cache_lifetime"/>
+                            <L7p:value stringValue="11234"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="custom"/>
+                            <L7p:value stringValue="2134"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="disable_audience_check"/>
+                            <L7p:value stringValue="false"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="given_access_token"/>
+                            <L7p:value stringValue="1234"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="onetime"/>
+                            <L7p:value stringValue="false"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="resource_required"/>
+                            <L7p:value stringValue="1234"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="scope_fail"/>
+                            <L7p:value stringValue="false"/>
+                        </L7p:entry>
+                        <L7p:entry>
+                            <L7p:key stringValue="scope_required"/>
+                            <L7p:value stringValue="4324555"/>
+                        </L7p:entry>
+                    </L7p:Parameters>
+                </L7p:Encapsulated>
+            </wsp:All>
+            <L7p:Include>
+                <L7p:PolicyGuid stringValue="0c8321c3-d484-4675-b1be-eddf6e780b8a"/>
+                <L7p:PolicyName stringValue="DemoAuthFragment"/>
+            </L7p:Include>
+        </wsp:OneOrMore>
         <L7p:Include>
             <L7p:PolicyGuid stringValue="819980fa-58cd-4134-a8c3-80290bcf340f"/>
+            <L7p:PolicyName stringValue="demoChangeFragment_loadConfig"/>
         </L7p:Include>
         <L7p:CustomizeErrorResponse>
             <L7p:Content stringValueReference="inline"><![CDATA[{
